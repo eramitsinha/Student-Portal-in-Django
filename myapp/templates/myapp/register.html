@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Register</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">My Project</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="register">Register</a></li>
+      <li><a href="login">Login</a></li>
+      <li><a href="students">Registered Students</a></li>
+      <li><a href="contact">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container">
+  <h3>Student Registration</h3>
+  <hr>
+  <form action="save" method="post">
+    {% csrf_token %}
+    Name : <input type="text" name="n1" class="form-control">
+    <br />
+    Email : <input type="email" name="e1" class="form-control">
+    <br />
+    Password : <input type="password" name="p1" class="form-control">
+    <br />
+    Adhar No. : <input type="text" name="a1" class="form-control">
+    <br />
+    Mobile No. : <input type="text" name="m1" class="form-control">
+    <br />
+    <input type="submit" value="Register" class="btn btn-primary">
+  </form>
+  {{message}}
+</div>
+
+</body>
+</html>

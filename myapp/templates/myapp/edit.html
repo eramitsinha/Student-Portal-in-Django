@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Edit Profile</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <Style>
+    td, th {
+    padding: 1%;
+}
+</Style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Edit Project</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="dashboard">Home</a></li>
+      <li><a href="profile">View Profile</a></li>
+      <li><a href="edit">Edit Profile</a></li>
+       <li><a href="upload">Upload Photo</a></li>
+      <li><a href="logout">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container">
+  <h3>Dashboard - My Profile</h3>
+  <hr>
+    <form action="update" method="post">
+      {% csrf_token %}
+      {% for k in user_data  %}
+        Name : <input type="text" name="n1" value="{{k.name}}">
+        <Br>
+        Mobile : <input type="text" name="m1" value="{{k.mobile}}">
+        <Br>
+        Password : <input type="text" name="p1" value="{{k.password}}">
+        <Br>
+        Adhar : <input type="text" name="a1" value="{{k.adhar}}">
+        <Br>
+        <input type="submit" name="" value="Update">
+
+      {% endfor %}
+  </table>
+</div>
+
+</body>
+</html>

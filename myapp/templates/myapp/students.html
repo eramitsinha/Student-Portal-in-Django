@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>View Registered Students</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ <Style>
+    td, th {
+    padding: 1%;
+}
+</Style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">My Project</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="register">Register</a></li>
+      <li><a href="login">Login</a></li>
+      <li><a href="students">Registered Students</a></li>
+      <li><a href="contact">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container">
+  <h3>View Registered Students</h3>
+  <hr>
+ <table border="2" cellpadding="10" width="100%">
+   <tr>
+      <th>Name</th>
+      <th>Mobile</th>
+      <th>Password</th>
+      <th>Adhar No.</th>
+    </tr>
+    {% for k in user_data  %}
+    <tr>
+      <td>{{k.name}}</td>
+      <td>{{k.mobile}}</td>
+      <td>{{k.password}}</td>
+      <td>{{k.adhar}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+
+</body>
+</html>
