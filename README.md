@@ -1,1 +1,1 @@
-# Student Portal Developed using Django Framework
+Student Portal Developed using Django Framework
